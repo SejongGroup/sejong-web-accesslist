@@ -25,7 +25,7 @@
 
 상용: pm2 start npm --name "AccessListWeb" -- start
 
-테스트: pm2 start npm --name "AccessListWeb" -- teststart
+테스트: pm2 start npm --name "AccessListWebDEV" -- teststart
 
 <br>
 
