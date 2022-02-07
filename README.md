@@ -23,6 +23,8 @@
 
 ## 실행 방법
 
+수정코드 적용 : npm run-script build
+
 상용: pm2 start npm --name "AccessListWeb" -- start
 
 테스트: pm2 start npm --name "AccessListWebDEV" -- teststart

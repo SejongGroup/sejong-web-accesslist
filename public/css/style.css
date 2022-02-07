@@ -125,10 +125,26 @@ a {
     color: black;
 }
 
+#form-access-content h3 {
+    position: absolute;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.3);
+}
+
 #form-access-content img {
     position: absolute;
     width: 30px;
     right: 40px;
+}
+
+#backspace {
+    transition: all 0.5s;
+}
+
+#backspace:hover {
+    border-bottom: 2px solid tomato;
 }
 
 #form-access-footer {

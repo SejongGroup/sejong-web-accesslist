@@ -9,5 +9,4 @@ function decrypted(encrypted, secretKey) {
 }
 
 module.exports.encrypted = encrypted;
-
 module.exports.decrypted = decrypted;
