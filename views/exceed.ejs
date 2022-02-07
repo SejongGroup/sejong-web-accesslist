@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>존재하지 않는 페이지</title>
+        <link rel="stylesheet" href="/static/css/reset.css" />
+        <link rel="stylesheet" href="/static/css/style.css" />
+    </head>
+    <body>
+        <div id="wrap-exceed">
+            <img src="/static/img/warning.png" alt="" />
+            <h2>요청량이 초과하였습니다.</h2>
+            <h6>요청량이 초과하여 차단되었습니다<br />잠시 후에 다시 시도해주시기 바랍니다.</h6>
+        </div>
+    </body>
+
+    <script>
+        setTimeout(function () {
+            location.reload();
+        }, 60000);
+    </script>
+</html>

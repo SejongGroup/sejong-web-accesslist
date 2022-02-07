@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/css/reset.css" />
+        <link rel="stylesheet" href="/static/css/style.css" />
+        <title>전자출입명부 서비스</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="form-content">
+                <div class="form-content-title">
+                    <h2>전자출입명부</h2>
+                    <span>인증이 실패한 사용자를 위한 <br />웹페이지 출입코드</span>
+                </div>
+                <div class="form-content-img">
+                    <img src="/static/img/waitforme-s.jpg" alt="" srcset="" />
+                </div>
+            </div>
+
+            <div id="form-footer">
+                <form action="/auth" method="post">
+                    <input type="text" id="authKey" name="authKey" value="<%= authKey %>" hidden />
+                    <input type="submit" value="출입번호 입력하기" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

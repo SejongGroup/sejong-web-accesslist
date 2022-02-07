@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/css/reset.css" />
+        <link rel="stylesheet" href="/static/css/style.css" />
+        <title>전자출입명부 서비스</title>
+    </head>
+    <body>
+        <div id="wrap-access" class="wrap-access">
+            <div class="finish-header">전자출입명부</div>
+            <div id="form-access-content">
+                <h2 id="valuespace"></h2>
+                <img id="backspace" src="/static/img/backspace.png" alt="" />
+            </div>
+            <div id="form-access-footer">
+                <div class="block">1</div>
+                <div class="block">2</div>
+                <div class="block">3</div>
+                <div class="block">4</div>
+                <div class="block">5</div>
+                <div class="block">6</div>
+                <div class="block">7</div>
+                <div class="block">8</div>
+                <div class="block">9</div>
+                <div class="block">취소</div>
+                <div class="block">0</div>
+                <div class="block">전송</div>
+                <input type="text" name="authKey" id="authKey" value="<%=authKey %>" hidden />
+            </div>
+        </div>
+
+        <div id="loading" class="loading off">
+            <div class="loding-bar"></div>
+        </div>
+
+        <div id="finish" class="finish off">
+            <div class="finish-header">전자출입명부</div>
+            <div class="finish-header-img">
+                <img src="/static/img/sb_img01.jpg" alt="" />
+                <img src="/static/img/sb_type1.jpg" alt="" />
+            </div>
+            <div class="finish-content">
+                <h6>2020.05.25 07:59:08에</h6>
+                <h2>세종텔레콤 님의 방문등록이 <br />완료되었습니다.</h2>
+            </div>
+            <div class="finish-footer">
+                <h4>본 화면을 담당자에게 보여주시기 바랍니다.</h4>
+                <h4>협조해 주셔서 감사합니다.</h4>
+            </div>
+        </div>
+    </body>
+    <script src="/static/js/main.js"></script>
+</html>

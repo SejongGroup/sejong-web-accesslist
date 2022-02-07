@@ -1,0 +1,26 @@
+{
+    "name": "phoneAccessback",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "teststart": "nodemon index.js",
+        "build": "npx webpack",
+        "test": "echo \"Error: no tesst specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.1",
+        "crypto-js": "^4.1.1",
+        "ejs": "^3.1.6",
+        "express": "^4.17.2",
+        "express-error-handler": "^1.1.0",
+        "express-rate-limit": "^6.2.0",
+        "mysql": "^2.18.1",
+        "webpack": "^5.68.0",
+        "webpack-cli": "^4.9.2"
+    }
+}
