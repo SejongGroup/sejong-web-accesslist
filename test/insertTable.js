@@ -1,3 +1,4 @@
+const { DATABASE_AUTH_TYPE, DATABASE_CDR_TYPE } = require("../const/const");
 const { createKey, enCrypt } = require("../utils/aes");
 const { getDate } = require("../utils/dateFormat");
 const { connection } = require("../utils/dbConect");
@@ -10,7 +11,7 @@ let key = createKey(timestamp);
 
 let aesURL = enCrypt(plainText, key);
 
-connection().then((dbInstance) => {
+connection(DATABASE_AUTH_TYPE).then((dbInstance) => {
     dbInstance.query(`INSERT INTO URLDATE values ('${aesURL}', '${timestamp}')`, function (error, result) {
         if (error) {
             console.log(error);
@@ -21,5 +22,9 @@ connection().then((dbInstance) => {
         }
     });
 
+    dbInstance.end();
+});
+
+connection(DATABASE_CDR_TYPE).then((dbInstance) => {
     dbInstance.end();
 });

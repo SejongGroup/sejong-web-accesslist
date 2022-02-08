@@ -1,11 +1,24 @@
 const Crypto = require("crypto");
 
+/**
+ * @description aes 암호화 및 복호화를 위한 키를 생성합니다.
+ * @param {String} timestamp
+ *
+ * @return {String} key
+ */
 function createKey(timestamp) {
     let myKey = timestamp + "SEJONG" + "GANGNAM";
     var md5 = Crypto.createHash("md5");
     return md5.update(myKey).digest("hex");
 }
 
+/**
+ * @description aes 암호화를 수행합니다.
+ * @param {String} plainText - 평문
+ * @param {String} key - 키
+ *
+ * @return {String} 암호문
+ */
 function enCrypt(plainText, key) {
     let iv = key.slice(16, 32);
     plainText = Buffer.from(plainText);
@@ -14,6 +27,13 @@ function enCrypt(plainText, key) {
     return Buffer.concat([encrypted, cipher.final()]).toString("base64");
 }
 
+/**
+ * @description aes 복호화를 수행합니다.
+ * @param {String} encryptText - 암호문
+ * @param {String} key - 키
+ *
+ * @return {String} 복호문
+ */
 function deCrypt(encryptText, key) {
     let iv = key.slice(16, 32);
     encryptText = Buffer.from(encryptText, "base64");

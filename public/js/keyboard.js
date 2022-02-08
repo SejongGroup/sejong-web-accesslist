@@ -14,9 +14,9 @@ backspace.addEventListener("click", (e) => {
     valuespace.innerHTML = valuespace.textContent.substring(0, valuespace.textContent.length - 1);
 
     if (check.length > 1) {
-        valueplaceholder.style.display = "none";
+        valueplaceholder.style.opacity = 0;
     } else {
-        valueplaceholder.style.display = "initial";
+        valueplaceholder.style.opacity = 1;
     }
 });
 
@@ -28,6 +28,8 @@ for (let i = 0; i < block.length; i++) {
 
         if (value === "취소") {
             valuespace.innerHTML = "";
+            valueplaceholder.style.opacity = 1;
+            return;
         } else if (value === "전송") {
             /** 전송 */
             if (check.length !== 4) {
@@ -35,7 +37,7 @@ for (let i = 0; i < block.length; i++) {
             } else {
                 loading.classList.remove("off");
                 let data = { authKey: authKey, accessCode: check };
-                fetch("/jongsungogo", {
+                fetch("/authsubmit", {
                     method: "POST", // or 'PUT'
                     body: JSON.stringify(data), // data can be `string` or {object}!
                     headers: {
@@ -67,9 +69,9 @@ for (let i = 0; i < block.length; i++) {
         /* value space 가 공백일 경우에  */
 
         if (check.length >= 0) {
-            valueplaceholder.style.display = "none";
+            valueplaceholder.style.opacity = 0;
         } else {
-            valueplaceholder.style.display = "initial";
+            valueplaceholder.style.opacity = 1;
         }
     });
 }

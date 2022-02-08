@@ -14,6 +14,11 @@ function getDate(dateFormat) {
     return date;
 }
 
+/**
+ * @description timestmp의 값을 지정한 형식으로 변경합니다.
+ * @param {string} timestamp - The format of the date to be returned.
+ * @returns {string} - The date in the requested format.
+ */
 function timestamp2int(timestamp) {
     return Dateformat(timestamp, "yyyymmddHHMMss");
 }

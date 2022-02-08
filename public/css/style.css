@@ -1,5 +1,8 @@
 #wrap {
     width: 100%;
+    height: 100%;
+
+    position: absolute;
 }
 
 a {
@@ -13,20 +16,25 @@ a {
     font-size: 18px;
     font-weight: 600;
     text-align: center;
-    padding: 30px 0px;
+    padding: 30px 0px 0px 0px;
     box-sizing: border-box;
 }
 
 #form-content {
-    margin-top: 70px;
+    position: relative;
+
     width: 100%;
-    height: 50%;
+    height: 60%;
+    padding: 50px 10px 0px 10px;
+
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .form-content-title {
     width: 100%;
-    height: 30%;
+    height: 40%;
+    position: relative;
 }
 
 .form-content-title h2 {
@@ -50,8 +58,11 @@ a {
 
 .form-content-img {
     width: 100%;
-    margin-top: 80px;
-    height: 70%;
+    height: 60%;
+    overflow: hidden;
+
+    padding: 30px 0px 0px 0px;
+    box-sizing: border-box;
 }
 
 .form-content-img img {
@@ -61,7 +72,7 @@ a {
 
 #form-footer {
     width: 100%;
-    height: 210px;
+    height: 40%;
 
     background-color: #cae3fe;
     opacity: 0.5;
@@ -123,6 +134,8 @@ a {
     text-align: center;
     font-weight: bolder;
     color: black;
+
+    transition: all 0.5s;
 }
 
 #form-access-content h3 {
@@ -131,6 +144,8 @@ a {
     text-align: center;
     font-weight: bolder;
     color: rgba(0, 0, 0, 0.3);
+
+    transition: all 0.5s;
 }
 
 #form-access-content img {
@@ -170,6 +185,7 @@ a {
     cursor: pointer;
 
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 #form-access-footer .block:hover {
