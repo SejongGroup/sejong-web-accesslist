@@ -55,6 +55,8 @@
 1. const/db.ini 폴더 수정
 2. 테이블 정의는 아래와 같습니다. 테스트 용도이기 때문에 변경하시기 바랍니다.
 
+<br>
+
 <code>
 CREATE TABLE TEST1 (
     cid varchar(30),
@@ -63,6 +65,8 @@ CREATE TABLE TEST1 (
     date Timestamp
 )
 </code>
+
+<br>
 
 <code>
 CREATE TABLE URLDATE (
