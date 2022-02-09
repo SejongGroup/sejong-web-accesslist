@@ -1,8 +1,11 @@
 /** import */
 const express = require("express");
 const path = require("path");
+const { LIMITER_LEAVE_TYPE } = require("../const/const");
 const { invaildAuthKey, authKey2DecryptJSON, deleteAuthKey } = require("../dao/authDAO");
 const { insertCDR } = require("../dao/cdrDAO");
+const { addQueueAndProcess } = require("../utils/dbQueue");
+const { conCurrentLimiter } = require("../utils/limiter");
 const { loggerInfo, loggerError } = require("../utils/logger");
 
 /** const */
@@ -27,23 +30,30 @@ router.post("/auth", (req, res) => {
 
     if (authKey.length == 0 || typeof authKey == undefined || authKey == null) {
         loggerInfo(jsName, `${frontLogger} - ${req.ip} - authKey가 존재하지 않아 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+        conCurrentLimiter(LIMITER_LEAVE_TYPE)(req, res, null); // 해당 접속자의 세션을 삭제합니다.
         return res.render("404");
     }
 
-    invaildAuthKey(authKey)
-        .then((res2) => {
-            if (res2 == true) {
-                return res.render("access", { authKey: req.body.authKey });
-            } else {
-                loggerInfo(jsName, `${frontLogger} - ${req.ip} - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+    addQueueAndProcess(active); // 실행할 함수를 동시 제한 병렬 큐에 삽입하여 처리합니다.
+
+    async function active() {
+        await invaildAuthKey(authKey)
+            .then((res2) => {
+                if (res2 == true) {
+                    return res.render("access", { authKey: req.body.authKey });
+                } else {
+                    loggerInfo(jsName, `${frontLogger} - ${req.ip} - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+                    return res.render("404");
+                }
+            })
+            .catch((err) => {
+                loggerError(jsName, `${frontLogger} - ${req.ip} - 데이터베이스 접근 도중 에러가 발생하였습니다.`);
+                loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
                 return res.render("404");
-            }
-        })
-        .catch((err) => {
-            loggerError(jsName, `${frontLogger} - ${req.ip} - 데이터베이스 접근 도중 에러가 발생하였습니다.`);
-            loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
-            return res.render("404");
-        });
+            });
+
+        conCurrentLimiter(LIMITER_LEAVE_TYPE)(req, res, null); // 해당 접속자의 세션을 삭제합니다.
+    }
 });
 
 /**
@@ -64,23 +74,30 @@ router.use("/auth", (req, res) => {
 
     if (authKey.length < 1 || typeof authKey == "undefined" || authKey == null) {
         loggerInfo(jsName, `${frontLogger} - ${req.ip} - authKey가 존재하지 않아 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+        conCurrentLimiter(LIMITER_LEAVE_TYPE)(req, res, null); // 해당 접속자의 세션을 삭제합니다.
         return res.render("404");
     }
 
-    invaildAuthKey(authKey)
-        .then((res2) => {
-            if (res2 === true) {
-                return res.render("index", { authKey: authKey });
-            } else {
-                loggerInfo(jsName, `${frontLogger} - ${req.ip} - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+    addQueueAndProcess(active); // 실행할 함수를 동시 제한 병렬 큐에 삽입하여 처리합니다.
+
+    async function active() {
+        await invaildAuthKey(authKey)
+            .then((res2) => {
+                if (res2 === true) {
+                    return res.render("index", { authKey: authKey });
+                } else {
+                    loggerInfo(jsName, `${frontLogger} - ${req.ip} - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+                    return res.render("404");
+                }
+            })
+            .catch((err) => {
+                loggerError(jsName, `${frontLogger} - ${req.ip} - 데이터베이스 접근 도중 에러가 발생하였습니다.`);
+                loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
                 return res.render("404");
-            }
-        })
-        .catch((err) => {
-            loggerError(jsName, `${frontLogger} - ${req.ip} - 데이터베이스 접근 도중 에러가 발생하였습니다.`);
-            loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
-            return res.render("404");
-        });
+            });
+
+        conCurrentLimiter(LIMITER_LEAVE_TYPE)(req, res, null); // 해당 접속자의 세션을 삭제합니다.
+    }
 });
 
 /**
@@ -102,55 +119,63 @@ router.post("/authsubmit", async (req, res) => {
 
     if (authKey.length == 0 || authKey == "undefined" || authKey == null) {
         loggerInfo(jsName, `${frontLogger} - ${req.ip} - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+        conCurrentLimiter(LIMITER_LEAVE_TYPE)(req, res, null); // 해당 접속자의 세션을 삭제합니다.
         return res.json({ success: false });
     }
 
     if (accessCode.length == 0 || accessCode == "undefined" || accessCode == null) {
         loggerInfo(jsName, `${frontLogger} - ${req.ip} - accessCode 파라미터가 존재하지 않아 오류페이지를 제공합니다. - 요청받은 accessCode : ${accessCode}`);
+        conCurrentLimiter(LIMITER_LEAVE_TYPE)(req, res, null); // 해당 접속자의 세션을 삭제합니다.
         return res.json({ success: false });
     }
 
-    invaildAuthKey(authKey)
-        .then((res2) => {
-            if (res2 === true) {
-                authKey2DecryptJSON(authKey)
-                    .then(async (res3) => {
-                        let caller = res3.caller;
-                        let called = res3.called;
+    addQueueAndProcess(active); // 실행할 함수를 동시 제한 병렬 큐에 삽입하여 처리합니다.
 
-                        let deleteAuthKeyResult = await deleteAuthKey(authKey);
+    async function active() {
+        await invaildAuthKey(authKey)
+            .then((res2) => {
+                if (res2 === true) {
+                    authKey2DecryptJSON(authKey)
+                        .then(async (res3) => {
+                            let caller = res3.caller;
+                            let called = res3.called;
 
-                        if (deleteAuthKeyResult != true) {
-                            loggerError(jsName, `${frontLogger} - ${req.ip} - ${deleteAuthKeyResult}`);
+                            let deleteAuthKeyResult = await deleteAuthKey(authKey);
+
+                            if (deleteAuthKeyResult != true) {
+                                loggerError(jsName, `${frontLogger} - ${req.ip} - ${deleteAuthKeyResult}`);
+                                return res.json({ success: false });
+                            }
+
+                            let insertCDRResult = await insertCDR(caller, called, accessCode);
+
+                            if (insertCDRResult != true) {
+                                loggerError(jsName, `${frontLogger} - ${req.ip} - ${insertCDRResult}`);
+                                return res.json({ success: false });
+                            }
+
+                            setTimeout(() => {
+                                loggerInfo(jsName, `${frontLogger} - ${req.ip} - 출입등록이 완료되었습니다.`);
+                                return res.json({ success: true });
+                            }, 2000);
+                        })
+                        .catch((err) => {
+                            loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
                             return res.json({ success: false });
-                        }
-
-                        let insertCDRResult = await insertCDR(caller, called, accessCode);
-
-                        if (insertCDRResult != true) {
-                            loggerError(jsName, `${frontLogger} - ${req.ip} - ${insertCDRResult}`);
-                            return res.json({ success: false });
-                        }
-
-                        setTimeout(() => {
-                            loggerInfo(jsName, `${frontLogger} - ${req.ip} - 출입등록이 완료되었습니다.`);
-                            return res.json({ success: true });
-                        }, 2000);
-                    })
-                    .catch((err) => {
-                        loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
-                        return res.json({ success: false });
-                    });
-            } else {
-                loggerInfo(jsName, `${frontLogger} - ${req.ip} - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+                        });
+                } else {
+                    loggerInfo(jsName, `${frontLogger} - ${req.ip} - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : ${authKey}`);
+                    return res.json({ success: false });
+                }
+            })
+            .catch((err) => {
+                loggerError(jsName, `${frontLogger} - ${req.ip} - 데이터베이스 접근 도중 에러가 발생하였습니다.`);
+                loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
                 return res.json({ success: false });
-            }
-        })
-        .catch((err) => {
-            loggerError(jsName, `${frontLogger} - ${req.ip} - 데이터베이스 접근 도중 에러가 발생하였습니다.`);
-            loggerError(jsName, `${frontLogger} - ${req.ip} - ${err}`);
-            return res.json({ success: false });
-        });
+            });
+
+        conCurrentLimiter(LIMITER_LEAVE_TYPE)(req, res, null); // 해당 접속자의 세션을 삭제합니다.
+    }
 });
 
 module.exports.root = router;

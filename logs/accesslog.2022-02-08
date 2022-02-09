@@ -648,3 +648,128 @@
 [2022-02-08 14:02:57] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
 [2022-02-08 14:02:13] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
 [2022-02-08 14:02:26] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 출입등록이 완료되었습니다.
+[2022-02-08 14:02:23] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 14:02:23] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : TN/qkGAv+qGM+Eod5OtqqK3M0FVFtm5jcz8z8ROUV0TtmwzXSzutHj/2wU51ooOx
+[2022-02-08 14:02:65] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 14:02:66] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : TN/qkGAv+qGM+Eod5OtqqK3M0FVFtm5jcz8z8ROUV0TtmwzXSzutHj/2wU51ooOx
+[2022-02-08 14:02:20] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 14:02:20] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : Q1+xRSjAIYT/sd1IU+NjZTYUVQOn/cOjSTgzFSirDz69nAznZOpfHL66LpoChPG4
+[2022-02-08 14:02:99] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 14:02:99] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : i7hS865/XsKlgR6vrlOHjHHS/QG7HaXrq+saMVRknhEj/m47lSLKvChXURn8ZYe4
+[2022-02-08 16:02:20] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 16:02:21] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 16:02:23] | [info] | index.js | express setting - "html" 문법을 "ejs" 로 변경
+[2022-02-08 16:02:23] | [info] | index.js | express setting - "front" 디렉토리를 ./views 로 변경
+[2022-02-08 16:02:23] | [info] | index.js | express setting - "static" 디렉토리를 ./public 로 변경
+[2022-02-08 16:02:23] | [info] | index.js | express setting - DDOS 방어 및 시간당 요청수 제한 설정
+[2022-02-08 16:02:23] | [info] | index.js | express setting - "BodyParser" 설정
+[2022-02-08 16:02:23] | [info] | index.js | express setting - "root" 라우터 설정
+[2022-02-08 16:02:23] | [info] | index.js | express setting - "error" 라우터 설정
+[2022-02-08 16:02:24] | [info] | index.js | PortNumber : 3000 - 전자출입명부 웹페이지 서비스를 시작합니다. 
+[2022-02-08 16:02:25] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 16:02:25] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 16:02:32] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 16:02:95] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 16:02:96] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 16:02:97] | [info] | index.js | express setting - "html" 문법을 "ejs" 로 변경
+[2022-02-08 16:02:97] | [info] | index.js | express setting - "front" 디렉토리를 ./views 로 변경
+[2022-02-08 16:02:97] | [info] | index.js | express setting - "static" 디렉토리를 ./public 로 변경
+[2022-02-08 16:02:97] | [info] | index.js | express setting - DDOS 방어 및 시간당 요청수 제한 설정
+[2022-02-08 16:02:97] | [info] | index.js | express setting - "BodyParser" 설정
+[2022-02-08 16:02:97] | [info] | index.js | express setting - "root" 라우터 설정
+[2022-02-08 16:02:97] | [info] | index.js | express setting - "error" 라우터 설정
+[2022-02-08 16:02:98] | [info] | index.js | PortNumber : 3000 - 전자출입명부 웹페이지 서비스를 시작합니다. 
+[2022-02-08 16:02:99] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 16:02:99] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 16:02:71] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:05] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 17:02:06] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 17:02:07] | [info] | index.js | express setting - "html" 문법을 "ejs" 로 변경
+[2022-02-08 17:02:07] | [info] | index.js | express setting - "front" 디렉토리를 ./views 로 변경
+[2022-02-08 17:02:07] | [info] | index.js | express setting - "static" 디렉토리를 ./public 로 변경
+[2022-02-08 17:02:07] | [info] | index.js | express setting - DDOS 방어 및 시간당 요청수 제한 설정
+[2022-02-08 17:02:07] | [info] | index.js | express setting - "BodyParser" 설정
+[2022-02-08 17:02:08] | [info] | index.js | express setting - "root" 라우터 설정
+[2022-02-08 17:02:08] | [info] | index.js | express setting - "error" 라우터 설정
+[2022-02-08 17:02:08] | [info] | index.js | PortNumber : 3000 - 전자출입명부 웹페이지 서비스를 시작합니다. 
+[2022-02-08 17:02:10] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 17:02:10] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 17:02:04] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:25] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:71] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:04] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:10] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:44] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:77] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:86] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:27] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:39] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:55] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:75] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:59] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 17:02:60] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 17:02:61] | [info] | index.js | express setting - "html" 문법을 "ejs" 로 변경
+[2022-02-08 17:02:62] | [info] | index.js | express setting - "front" 디렉토리를 ./views 로 변경
+[2022-02-08 17:02:62] | [info] | index.js | express setting - "static" 디렉토리를 ./public 로 변경
+[2022-02-08 17:02:62] | [info] | index.js | express setting - DDOS 방어 및 시간당 요청수 제한 설정
+[2022-02-08 17:02:62] | [info] | index.js | express setting - "BodyParser" 설정
+[2022-02-08 17:02:62] | [info] | index.js | express setting - "root" 라우터 설정
+[2022-02-08 17:02:62] | [info] | index.js | express setting - "error" 라우터 설정
+[2022-02-08 17:02:63] | [info] | index.js | PortNumber : 3000 - 전자출입명부 웹페이지 서비스를 시작합니다. 
+[2022-02-08 17:02:64] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 17:02:64] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 17:02:71] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:09] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:86] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:14] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:47] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:66] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:21] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:91] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:35] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 출입등록이 완료되었습니다.
+[2022-02-08 17:02:81] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:81] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:31] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:31] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:19] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:19] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:25] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:56] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:39] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:54] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:70] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:81] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:17] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:96] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:20] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : KAVWyJCjxzSB6lcNSmSIFo0S2thRhEfBN2dU38XzCW5Svwagd7mJNde0tyGnW6G8123
+[2022-02-08 17:02:21] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:21] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:21] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:22] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:24] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:25] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:25] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : M9cJ+6OL0o2nDOo346KnFQaXxvtSbQNkNE/xalA7GyypWnv1b001ghyEPRwXWfB/
+[2022-02-08 17:02:93] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:77] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:64] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:77] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 출입등록이 완료되었습니다.
+[2022-02-08 17:02:83] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 17:02:84] | [info] | dbConect.js | database setting - 데이터베이스 접근을 시도합니다.
+[2022-02-08 17:02:85] | [info] | index.js | express setting - "html" 문법을 "ejs" 로 변경
+[2022-02-08 17:02:85] | [info] | index.js | express setting - "front" 디렉토리를 ./views 로 변경
+[2022-02-08 17:02:86] | [info] | index.js | express setting - "static" 디렉토리를 ./public 로 변경
+[2022-02-08 17:02:86] | [info] | index.js | express setting - DDOS 방어 및 시간당 요청수 제한 설정
+[2022-02-08 17:02:86] | [info] | index.js | express setting - "BodyParser" 설정
+[2022-02-08 17:02:86] | [info] | index.js | express setting - "root" 라우터 설정
+[2022-02-08 17:02:86] | [info] | index.js | express setting - "error" 라우터 설정
+[2022-02-08 17:02:87] | [info] | index.js | PortNumber : 3000 - 전자출입명부 웹페이지 서비스를 시작합니다. 
+[2022-02-08 17:02:88] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 17:02:88] | [info] | dbConect.js | database setting - 성공적으로 데이터베이스에 접근하였습니다.
+[2022-02-08 17:02:00] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:01] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : KAVWyJCjxzSB6lcNSmSIFo0S2thRhEfBN2dU38XzCW5Svwagd7mJNde0tyGnW6G8
+[2022-02-08 17:02:34] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:03] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 데이터베이스에 일치하는 authKey가 없어 오류페이지를 제공합니다. - 요청받은 authKey : KAVWyJCjxzSB6lcNSmSIFo0S2thRhEfBN2dU38XzCW5Svwagd7mJNde0tyGnW6G8
+[2022-02-08 17:02:66] | [info] | root.js | [url:/auth|method:GET] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:67] | [info] | root.js | [url:/auth|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:68] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 사용자가 접근하였습니다.
+[2022-02-08 17:02:80] | [info] | root.js | [url:/authsubmit|method:POST] - 202.30.249.27 - 출입등록이 완료되었습니다.
